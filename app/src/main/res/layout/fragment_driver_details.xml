@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:text="Register a Service"
+        android:layout_margin="5dp"
+        android:id="@+id/serviceHeader"/>
+<com.google.android.material.textfield.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:id="@+id/serviceTypeLayout"
+    android:layout_below="@+id/serviceHeader"
+    android:hint="Service Type">
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/serviceType"
+        android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
+        android:focusable="false"
+        android:inputType="text"/>
+</com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/vehicleTypeLayout"
+        android:layout_below="@+id/serviceTypeLayout"
+        android:hint="Vehicle Type"
+        app:helperText="e.g Truck,Lorry">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/vehicleType"
+            android:focusable="false"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/regNumberLayout"
+        android:layout_below="@id/vehicleTypeLayout"
+        android:hint="Vehicle Registration Number">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/regNumber"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/capacityLayout"
+        android:layout_below="@+id/regNumberLayout"
+        android:hint="Carriage Capacity"
+        app:helperText="e.g 12 Tonnes, 15kg">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/capacity"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/serviceLocationLayout"
+        android:layout_below="@+id/capacityLayout"
+        android:hint="Service Location"
+        app:helperText="Defaults to your current location">
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/pickupValue"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:drawableEnd="@drawable/dropoff"
+            android:drawablePadding="10dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/serviceLocationLayout"
+        android:id="@+id/addService"
+        android:layout_margin="10dp"
+        android:text="Add Service"/>
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:indicatorSize="70dp"
+            app:trackThickness="10dp"
+            app:indicatorColor="@color/secondary"
+            app:trackColor="@color/quantum_grey300"
+            android:indeterminate="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:id="@+id/progress"/>
+
+    </RelativeLayout>
+</ScrollView>

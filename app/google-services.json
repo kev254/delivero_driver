@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1085210092199",
+    "firebase_url": "https://emaxyhospital-default-rtdb.firebaseio.com",
+    "project_id": "emaxyhospital",
+    "storage_bucket": "emaxyhospital.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085210092199:android:3d76f65a24a494972f3182",
+        "android_client_info": {
+          "package_name": "com.delivero.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085210092199-juktdgqdop87resbto2iugvqqjfbrfrc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHQUOzekP0LtjAGEKDOYXjyckyhLT2cao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1085210092199-juktdgqdop87resbto2iugvqqjfbrfrc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,66 @@
+[versions]
+agp = "8.3.0-beta02"
+androidNetworking = "1.0.2"
+capiche = "1.0"
+coil = "2.5.0"
+safeargs="2.7.6"
+googleMapsSecrets="2.0.1"
+gms="4.4.0"
+coreSplashscreen = "1.0.1"
+eventbus = "3.3.1"
+firebaseBom = "32.7.0"
+geofireAndroidVersion = "3.2.0"
+googleMapsServices = "2.2.0"
+gson = "2.10.1"
+kotlin = "1.9.22"
+coreKtx = "1.12.0"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.6.1"
+material = "1.11.0"
+activity = "1.8.2"
+constraintlayout = "2.1.4"
+navigationFragmentKtx = "2.7.6"
+places = "3.3.0"
+ripplemapview = "1.0.0"
+
+
+[libraries]
+android-networking = { module = "com.amitshekhar.android:android-networking", version.ref = "androidNetworking" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
+androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
+androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationFragmentKtx" }
+capiche = { module = "com.github.jianastrero:capiche", version.ref = "capiche" }
+coil = { module = "io.coil-kt:coil", version.ref = "coil" }
+eventbus = { module = "org.greenrobot:eventbus", version.ref = "eventbus" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-auth = { module = "com.google.firebase:firebase-auth" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-config-ktx = { module = "com.google.firebase:firebase-config-ktx" }
+firebase-database = { module = "com.google.firebase:firebase-database" }
+firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
+firebase-geofire-android = { module = "com.firebase:geofire-android", version.ref = "geofireAndroidVersion" }
+firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
+firebase-inappmessaging-display = { module = "com.google.firebase:firebase-inappmessaging-display" }
+firebase-storage = { module = "com.google.firebase:firebase-storage" }
+google-maps-services = { module = "com.google.maps:google-maps-services", version.ref = "googleMapsServices" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+places = { module = "com.google.android.libraries.places:places", version.ref = "places" }
+ripplemapview = { module = "com.github.serhatleventyavas:RippleMapView", version.ref = "ripplemapview" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+navigationSafeArgs = { id="androidx.navigation.safeargs", version.ref= "safeargs" }
+googleMapsSecrets = {id="com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref="googleMapsSecrets" }
+gmsAndroid = { id="com.google.gms.google-services", version.ref="gms" }
+
