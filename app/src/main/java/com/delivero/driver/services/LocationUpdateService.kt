@@ -7,6 +7,8 @@ import android.location.Location
 import android.os.IBinder
 import android.os.Looper
 import com.delivero.driver.helpers.Preference
+import com.delivero.driver.models.LocationDTO
+import com.delivero.driver.models.LocationUpdateEvent
 import com.firebase.geofire.GeoFire
 import com.firebase.geofire.GeoLocation
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -18,6 +20,7 @@ import com.google.android.gms.location.Priority
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import org.greenrobot.eventbus.EventBus
 
 class LocationUpdateService : Service() {
     private val UPDATE_INTERVAL_IN_MILLISECONDS: Long = 5000
@@ -44,6 +47,12 @@ class LocationUpdateService : Service() {
            if (Firebase.auth.currentUser==null){
                return
            }
+            val dto=LocationDTO()
+            dto.latitude=currentLocation.latitude;
+            dto.longitude=currentLocation.longitude
+            dto.speed= currentLocation.speed.toDouble();
+
+            EventBus.getDefault().post(dto)
             val georef1=GeoFire(Firebase.database.getReference("Drivers"))
             georef1.setLocation(Firebase.auth.currentUser!!.uid, GeoLocation(currentLocation.latitude,
                 currentLocation.longitude))
